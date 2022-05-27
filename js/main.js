@@ -47,7 +47,7 @@ function sendIdentification() {
         // console.log(data.suggestions[0].plant_details.url)
 
         var commonName = document.createElement("h2")
-        var commonNameText = document.createTextNode(data.suggestions[0].plant_details.plant_name)
+        var commonNameText = document.createTextNode(data.suggestions[0].plant_name)
         commonName.appendChild(commonNameText)
         var commonNameElement = document.getElementById('plant_information')
         commonNameElement.appendChild(commonName)
