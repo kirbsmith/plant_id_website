@@ -52,11 +52,11 @@ function sendIdentification() {
         var commonNameElement = document.getElementById('plant_information')
         commonNameElement.appendChild(commonName)
 
-        var scientificName = document.createElement("p")
-        var text = document.createTextNode(data.suggestions[0].plant_details.scientific_name)
-        scientificName.appendChild(text)
-        var element = document.getElementById('plant_information')
-        element.appendChild(scientificName)
+        // var scientificName = document.createElement("p")
+        // var text = document.createTextNode(data.suggestions[0].plant_details.scientific_name)
+        // scientificName.appendChild(text)
+        // var element = document.getElementById('plant_information')
+        // element.appendChild(scientificName)
 
         var img = document.createElement("img")
         img.src = data.suggestions[0].similar_images[0].url
