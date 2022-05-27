@@ -73,6 +73,7 @@ h2{
   font-size: 48px;
   font-style: bold;
   border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
 
 p{
