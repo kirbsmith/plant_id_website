@@ -42,9 +42,6 @@ function sendIdentification() {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data)
-        // console.log(data.suggestions[0].plant_details.common_names)
-        // console.log(data.suggestions[0].plant_details.scientific_name)
-        // console.log(data.suggestions[0].plant_details.url)
 
         var commonName = document.createElement("h2")
         var commonNameText = document.createTextNode(data.suggestions[0].plant_name)
@@ -52,11 +49,13 @@ function sendIdentification() {
         var commonNameElement = document.getElementById('plant_information')
         commonNameElement.appendChild(commonName)
 
-        // var scientificName = document.createElement("p")
-        // var text = document.createTextNode(data.suggestions[0].plant_details.scientific_name)
-        // scientificName.appendChild(text)
-        // var element = document.getElementById('plant_information')
-        // element.appendChild(scientificName)
+        var confidencePercentageParagraph = document.createElement("p")
+        var confidenceRatio = data.suggestions[0].probability
+        var confidencePercentage = document.createTextNode(Math.trunc(confidenceRatio * 100) + " % Confidence in Result")
+        console.log(confidencePercentage)
+        confidencePercentageParagraph.appendChild(confidencePercentage)
+        var confidencePercentageElement = document.getElementById('plant_information')
+        confidencePercentageElement.appendChild(confidencePercentageParagraph)
 
         var img = document.createElement("img")
         img.src = data.suggestions[0].similar_images[0].url
