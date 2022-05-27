@@ -52,7 +52,7 @@ function sendIdentification() {
 
         var confidencePercentageParagraph = document.createElement("p")
         var confidenceRatio = data.suggestions[0].probability
-        var confidencePercentage = document.createTextNode(Math.trunc(confidenceRatio * 100) + " % Confidence in Result")
+        var confidencePercentage = document.createTextNode(Math.trunc(confidenceRatio * 100) + "% Confidence in Result")
         console.log(confidencePercentage)
         confidencePercentageParagraph.appendChild(confidencePercentage)
         var confidencePercentageElement = document.getElementById('plant_information')
