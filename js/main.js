@@ -18,7 +18,10 @@ function sendIdentification() {
       console.log(base64files)
 
       const data = {
-        api_key: "xNuc6x9ITxnDVN1gNckvQxoBQHyJVwUVu8bJCGux5QaYIxr5ud",
+        // api key goes below this line
+        //GITIGNORE START
+        api_key: xNuc6x9ITxnDVN1gNckvQxoBQHyJVwUVu8bJCGux5QaYIxr5ud,
+        //GITIGNOREEND
         images: base64files,
         // modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
         modifiers: ["crops_fast", "similar_images"],
