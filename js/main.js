@@ -42,9 +42,9 @@ function sendIdentification() {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data)
-        console.log(data.suggestions[0].plant_details.common_names)
-        console.log(data.suggestions[0].plant_details.scientific_name)
-        console.log(data.suggestions[0].plant_details.url)
+        // console.log(data.suggestions[0].plant_details.common_names)
+        // console.log(data.suggestions[0].plant_details.scientific_name)
+        // console.log(data.suggestions[0].plant_details.url)
 
         var commonName = document.createElement("h2")
         var commonNameText = document.createTextNode(data.suggestions[0].plant_details.plant_name)
