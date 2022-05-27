@@ -1,0 +1,93 @@
+@font-face{
+  font-family: "DalelandsUncial";
+  src: url('DalelandsUncial-BOpn.ttf') format('truetype');
+  font-family: "MAGIC";
+  src: url('MAGIC.ttf') format('truetype');
+}
+
+* {
+  	box-sizing: border-box;
+  	font-family: "Montserrat", sans-serif;
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+  background: rgba(146,210,147,0.8);
+}
+
+#heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 16px;
+}
+
+h1{
+  font-size: 50px;
+  font-family: "Fira Sans", "Montserrat", sans-serif;
+}
+
+input{
+  font-family: "Fira Sans", "Montserrat", sans-serif;
+  font-size: 18px;
+  padding-top: 60px;
+}
+
+button{
+  font-size: 32px;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#input_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#plant_information{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2{
+  padding-top: 20px;
+  font-size: 48px;
+  font-style: bold;
+  border-bottom: 2px solid black;
+}
+
+p{
+  font-size: 24px;
+}
+
+img{
+  width: 350px;
+  height: auto;
+}
+
+#contact_information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 16px;
+}
