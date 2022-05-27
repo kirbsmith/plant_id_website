@@ -1,4 +1,3 @@
-
 document.querySelector("#search_button").addEventListener('click', sendIdentification)
 
 function sendIdentification() {
@@ -20,7 +19,7 @@ function sendIdentification() {
 
       const data = {
         // api key goes below this line
-        api_key: process.env.API_KEY,
+        api_key: 'xNuc6x9ITxnDVN1gNckvQxoBQHyJVwUVu8bJCGux5QaYIxr5ud',
         images: base64files,
         // modifiers docs: https://github.com/flowerchecker/Plant-id-API/wiki/Modifiers
         modifiers: ["crops_fast", "similar_images"],
