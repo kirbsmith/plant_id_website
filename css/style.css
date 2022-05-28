@@ -92,3 +92,15 @@ img{
   flex-direction: row;
   padding-bottom: 16px;
 }
+
+a{
+  font-family: "Montserrat", "Fira Sans", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.2s;
+  color: rgba(25,120,20,1);
+}
+
+a:hover{
+  color: black;
+}

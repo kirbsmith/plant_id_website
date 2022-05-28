@@ -1,4 +1,14 @@
 document.querySelector("#search_button").addEventListener('click', sendIdentification)
+document.querySelector("#search_button").addEventListener('click', waitTime)
+
+const btn = document.getElementById("search_button")
+function waitTime() {
+  btn.disabled = true;
+  setTimeout(()=>{
+    btn.disabled = false;
+    console.log('Button Activated')}, 5000)
+
+}
 
 function sendIdentification() {
     const files = [...document.querySelector('input[type=file]').files];
