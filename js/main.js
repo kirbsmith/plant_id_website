@@ -76,6 +76,7 @@ function sendIdentification() {
         var wikiTagSection = document.getElementById('plant_information')
         var plantWikiTag = document.createElement("a")
         plantWikiTag.setAttribute('href', data.suggestions[0].plant_details.url)
+        plantWikiTag.setAttribute('target', '_blank')
         plantWikiTag.innerText = "Want to know more about your plant?"
         wikiTagSection.appendChild(plantWikiTag)
 
