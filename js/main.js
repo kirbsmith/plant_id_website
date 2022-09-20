@@ -1,5 +1,6 @@
 document.querySelector("#search_button").addEventListener('click', sendIdentification)
 document.querySelector("#search_button").addEventListener('click', waitTime)
+document.querySelector("#past_searches").addEventListener('click', getHistory)
 
 const btn = document.getElementById("search_button")
 function waitTime() {
@@ -7,7 +8,6 @@ function waitTime() {
   setTimeout(()=>{
     btn.disabled = false;
     console.log('Button Activated')}, 5000)
-
 }
 
 function sendIdentification() {
@@ -80,10 +80,33 @@ function sendIdentification() {
         plantWikiTag.innerText = "Want to know more about your plant?"
         wikiTagSection.appendChild(plantWikiTag)
 
+        if(!localStorage.getItem('plants')){
+          localStorage.setItem('plants', data.suggestions[0].plant_name)
+        } else{
+          let plants = localStorage.getItem('plants') + " " + data.suggestions[0].plant_name
+          localStorage.setItem('plants', plants)
+        }
+
       })
       .catch((error) => {
         console.error('Error:', error);
       });
     })
 
+}
+
+function getHistory(){
+  if(!localStorage.getItem('plants')){
+    var noSearches = document.createElement("p")
+    noSearches.innerText = "There have been no previous searches on this device"
+    var noSearchesSection = document.getElementById("past_searches_section")
+    noSearchesSection.innerText = noSearches
+    noSearchesSection.appendChild(noSearches)
+  } else{
+    var searches = document.createElement("p")
+    searches.innerText = "You have searched for these plants on this device:"
+    var searchesSection = document.getElementById("past_searches_section")
+    searchesSection.innerText = searches
+    searchesSection.appendChild(searches)
+  }
 }
