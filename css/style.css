@@ -1,9 +1,3 @@
-@font-face{
-  font-family: "DalelandsUncial";
-  src: url('DalelandsUncial-BOpn.ttf') format('truetype');
-  font-family: "MAGIC";
-  src: url('MAGIC.ttf') format('truetype');
-}
 
 * {
   	box-sizing: border-box;
@@ -57,6 +51,8 @@ form{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
   gap: 10px;
 }
 
